@@ -1,0 +1,55 @@
+/* Dashboard Styles */
+.dashboard-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .dashboard-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1ed760;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .playlists-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .playlist-item {
+    background-color: #282828;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .playlist-name {
+    font-size: 1.2rem;
+    color: #b3b3b3;
+  }
+  
+  .playlist-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .playlist-action-button {
+    background-color: #1ed760;
+    color: #191414;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .playlist-action-button:hover {
+    background-color: #1db954;
+  }
