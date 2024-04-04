@@ -1,7 +1,7 @@
 const express = require("express");
 
-const viewController = require("./../Controller/viewController");
-const loginController = require("./../Controller/loginController");
+const viewController = require("../Controller/viewController");
+const loginController = require("../Controller/loginController");
 const userRouter = express.Router();
 const {
   getPlaylistTracks,
