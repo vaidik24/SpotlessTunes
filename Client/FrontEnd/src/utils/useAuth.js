@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+export let access_token = ""
+
 export default function useAuth(code) {
   const [accessToken, setAccessToken] = useState();
   const [refreshToken, setRefreshToken] = useState();
@@ -16,6 +18,7 @@ export default function useAuth(code) {
         console.log("hello from uceAuth");
         console.log("1. " + res.data.accessToken);
         setAccessToken(res.data.accessToken);
+        access_token = res.data.accessToken;
         setRefreshToken(res.data.refreshToken);
         setExpiresIn(res.data.expiresIn);
         // window.history.pushState({}, null, "/");
@@ -36,6 +39,7 @@ export default function useAuth(code) {
           refreshToken,
         });
         setAccessToken(response.data.accessToken);
+        access_token = response.data.accessToken;
       } catch (err) {
         window.location = "/";
       }
@@ -44,6 +48,7 @@ export default function useAuth(code) {
     return () => {
       clearInterval(interval);
       setAccessToken(null); // Trigger a re-render with null accessToken
+      access_token = ""
     };
   }, [accessToken, refreshToken, expiresIn]);
 
