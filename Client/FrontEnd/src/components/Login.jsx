@@ -1,8 +1,10 @@
-import "./login.css";
+import "../styles/login.css";
 import { Link } from "react-router-dom";
 
 const AUTH_URL =
-  "https://accounts.spotify.com/authorize?client_id=2c8defea59394bd281aba771882235ca&response_type=code&redirect_uri=http://localhost:3000&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state%20playlist-read-private%20playlist-read-collaborative";
+  "https://accounts.spotify.com/authorize?client_id=860060f6eb7743a2b87dcead95d611c3&response_type=code&redirect_uri=http://localhost:3000/auth&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state%20playlist-read-private%20playlist-read-collaborative%20playlist-modify-public%20playlist-modify-private";
+
+
 
 function Login() {
   return (
