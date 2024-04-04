@@ -2,8 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./styles/App.css";
 import Login from "./components/Login.jsx";
 import Dashboard from "./components/Dashboard.jsx";
-import useAuth from "./utils/useAuth.js";
-import {access_token} from "./utils/useAuth.js";
 import AuthCodeHandler from "./components/AuthCodeHandler.jsx";
 import NavBar from "./components/Navbar.jsx";
 function App() {
@@ -12,7 +10,6 @@ function App() {
 
   return (
     <>
-
       <Router>
         <NavBar />
         <Routes>
@@ -24,19 +21,9 @@ function App() {
           {/*    path="/auth"*/}
           {/*    element={ <AuthCodeHandler/> }*/}
           {/*/>*/}
-          <Route
-              path="/"
-              element={<Login />}
-          />
-          <Route
-              path="/home"
-              element={<Dashboard/>}
-          />
-          <Route
-              path="/auth"
-              element={<AuthCodeHandler />}
-          />
-
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<Dashboard />} />
+          <Route path="/auth" element={<AuthCodeHandler />} />
         </Routes>
       </Router>
     </>
