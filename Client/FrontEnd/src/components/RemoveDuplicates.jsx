@@ -1,12 +1,18 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import "../styles/dashboard.css";
+import "../styles/removeduplicates.css";
 import { useLocation } from "react-router-dom";
 import spotifyService from "../utils/SpotifyService.js";
+import {access_token} from "../utils/useAuth.js";
+import {useAccessToken} from "./AccessTokenContext.jsx";
 
-function Dashboard() {
-  const location = useLocation();
-  const { accessToken } = location.state || {};
+function RemoveDuplicates() {
+  // const location = useLocation();
+  // // const { accessToken } = location.state || {};
+  let { accessToken } = useAccessToken();
+  if(accessToken === null){
+    accessToken = localStorage.getItem("accessToken");
+  }
   const [playlists, setPlaylists] = useState([]);
   const [loadingPlaylistIds, setLoadingPlaylistIds] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
@@ -56,6 +62,7 @@ function Dashboard() {
 
   const removeDuplicates = async (playlistId) => {
     let playlist;
+    console.log("playlistId", playlistId);
     playlists.forEach((p) => {
       if (p.id === playlistId) {
         playlist = p;
@@ -129,7 +136,7 @@ function Dashboard() {
                 <ul>
                   {playlist.tracks.map((track) => (
                     <li key={track.id}>
-                      {track.name} - {track.artists}
+                      {track.name} - {track.artist}
                     </li>
                   ))}
                 </ul>
@@ -143,8 +150,8 @@ function Dashboard() {
   );
 }
 
-Dashboard.propTypes = {
+RemoveDuplicates.propTypes = {
   accessToken: PropTypes.string,
 };
 
-export default Dashboard;
+export default RemoveDuplicates;
