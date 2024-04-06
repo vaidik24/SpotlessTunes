@@ -1,59 +1,100 @@
+/* statistics.css */
+
+/* Parent container styling */
 .parent-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    margin-top: 50px;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    max-width: 800px;
-    height: 70vh;
-    overflow-y: auto;
-    padding: 0;
-}
-
+/* Button container styling */
 .buttons {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
 
+/* Button styling */
+.buttons button {
+    background-color: #1ed760;
+    background-image: linear-gradient(to right, #1ed760, #4caf50);
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 20px rgba(30, 215, 96, 0.5); /* Adding glow effect */
+}
+
+/* Button hover effect */
+.buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 0 30px rgba(30, 215, 96, 0.7); /* Increasing glow on hover */
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+}
+
+/* Heading styling */
+h1 {
+    color: #1ed760;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* List styling */
 .list {
     list-style: none;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    margin: 0;
 }
 
+/* List item styling */
 .list-item {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-    color: black;
-    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #282828;
+    background-image: linear-gradient(to right, #282828, #1a1a1a);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
 }
 
-.list-item span {
-    margin-right: 10px;
+/* List item hover effect */
+.list-item:hover {
+    transform: translateY(-3px);
 }
 
+/* Image styling */
 .list-item img {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
+/* Text styling */
 .list-item p {
+    color: #ffffff;
     margin: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    flex-grow: 1;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Index styling */
+.list-item span {
+    color: #1ed760;
+    font-weight: bold;
+    margin-right: 10px;
 }

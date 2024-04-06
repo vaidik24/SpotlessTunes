@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 import "../styles/removeduplicates.css";
 import { useLocation } from "react-router-dom";
 import spotifyService from "../utils/SpotifyService.js";
-import {access_token} from "../utils/useAuth.js";
-import {useAccessToken} from "./AccessTokenContext.jsx";
+import { access_token } from "../utils/useAuth.js";
+import { useAccessToken } from "./AccessTokenContext.jsx";
 
 function RemoveDuplicates() {
   // const location = useLocation();
   // // const { accessToken } = location.state || {};
   let { accessToken } = useAccessToken();
-  if(accessToken === null){
+  if (accessToken === null) {
     accessToken = localStorage.getItem("accessToken");
   }
   const [playlists, setPlaylists] = useState([]);
@@ -119,14 +119,6 @@ function RemoveDuplicates() {
                     : playlist.hasDuplicates
                     ? "Remove Duplicates"
                     : "Get Duplicates"}
-                </button>
-                <button
-                  className="playlist-action-button"
-                  onClick={() => {
-                    console.log("logic for converting playlist");
-                  }}
-                >
-                  Convert Playlist
                 </button>
               </div>
             </div>
