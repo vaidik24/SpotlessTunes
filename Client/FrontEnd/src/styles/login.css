@@ -1,7 +1,7 @@
 /* General Styles */
 body {
   font-family: 'Circular', sans-serif;
-  background-color: #231c1c;
+  background-color: white;
   color: #ffffff;
   margin: 0;
   padding: 0;
@@ -43,7 +43,7 @@ body {
 
 /* Input Field Styles */
 .input-field {
-  background-color: #282828;
+  background-color: white;
   padding: 0 50px 20px 50px ;
   width: 30%;
   border-radius: 30px;
