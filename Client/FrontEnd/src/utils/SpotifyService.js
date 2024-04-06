@@ -7,6 +7,34 @@ const spotifyService = (accessToken) => {
     spotifyApi.setAccessToken(accessToken);
 
 
+    const getTopArtists = async () => {
+        try {
+            const data = await spotifyApi.getMyTopArtists();
+            return data.body.items.map(item => ({
+                name: item.name,
+                imageUrl: item.images.length > 0 ? item.images[0].url : null
+            })); // Return the top artists
+        } catch (err) {
+            console.log('Something went wrong!', err);
+            throw err; // Rethrow the error to handle it in the calling function
+        }
+    }
+
+    const getTopTracks = async () => {
+        try {
+            const data = await spotifyApi.getMyTopTracks();
+            return data.body.items.map(item => ({
+                name: item.name,
+                artist: item.artists.map(artist => artist.name).join(', '), // Join multiple artists if exist
+                imageUrl: item.album.images.length > 0 ? item.album.images[0].url : null
+                // Add more fields if needed
+            }));
+        } catch (err) {
+            console.log('Something went wrong!', err);
+            throw err; // Rethrow the error to handle it in the calling function
+        }
+    }
+
     const getUserPlaylists = async () => {
         try {
             const data = await spotifyApi.getUserPlaylists();
@@ -115,6 +143,8 @@ const spotifyService = (accessToken) => {
         getUserPlaylists,
         getPlaylistTracksWithDuplicates,
         removeDuplicateTracksFromPlaylist,
+        getTopArtists,
+        getTopTracks
         // Add more methods as needed...
     };
 };
