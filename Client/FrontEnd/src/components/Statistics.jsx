@@ -25,7 +25,7 @@ const Statistics = () => {
             }
         };
         fetchTopData();
-    }, [service]); // Fetch data only once when service changes
+    }, [accessToken]); // Fetch data only once when service changes
 
     const handleTopArtistsClick = () => {
         setStatType("artists");
@@ -36,48 +36,57 @@ const Statistics = () => {
     };
 
     return (
-    <div className="parent-container">
-        <div className="buttons">
-            <button onClick={handleTopArtistsClick}>Top Artists</button>
-            <button onClick={handleTopTracksClick}>Top Songs</button>
-        </div>
+        <div className="parent-container">
+            <div className="buttons">
+                <button onClick={handleTopArtistsClick}>Top Artists</button>
+                <button onClick={handleTopTracksClick}>Top Songs</button>
+            </div>
 
-    <div className="container">
-        <h1>Your top artists and tracks!</h1>
-        {statType === "artists" && (
-            <div>
-                {dataLoaded && (
-                        <ul className="list">
-                            {topArtists.map((artist, index) => (
-                                <li className="list-item" key={index}>
-                                    <span>{index + 1}. </span>
-                                    <img src={artist.imageUrl} alt={artist.name} />
-                                    <p>{artist.name}</p>
-                                </li>
-                            ))}
-                        </ul>
-                    )}
-                </div>
-            )}
+            <div className="container">
+                <h1>Your top artists and tracks!</h1>
+                {statType === "artists" && (
+                    <div>
+                        {dataLoaded && (
+                            <ul className="list">
+                                {topArtists.map((artist, index) => (
+                                    <li className="list-item top-artists" key={index}>
+                                        <span className="number">{index + 1}.</span>
+                                        <div className="list-item-content">
+                                            <img src={artist.imageUrl} alt={artist.name} />
+                                            <div className="track-artist-names">
+                                                <p className="artist-name">{artist.name}</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                    </div>
+                )}
 
-            {statType === "tracks" && (
-                <div>
-                    {dataLoaded && (
-                        <ul className="list">
-                            {topTracks.map((track, index) => (
-                                <li className="list-item" key={index}>
-                                    <span>{index + 1}. </span>
-                                    <img src={track.imageUrl} alt={track.name} />
-                                    <p>{track.name}</p>
-                                    <p>{track.artist}</p>
-                                </li>
-                            ))}
-                        </ul>
-                    )}
-                </div>
-            )}
+                {statType === "tracks" && (
+                    <div>
+                        {dataLoaded && (
+                            <ul className="list">
+                                {topTracks.map((track, index) => (
+                                    <li className="list-item" key={index}>
+                                        <span className="number">{index + 1}.</span>
+                                        <div className="list-item-content">
+                                            <img src={track.imageUrl} alt={track.name} />
+                                            <div className="track-artist-names">
+                                                <p className="track-name">{track.name}</p>
+                                                <p className="artist-name">{track.artist}</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                    </div>
+                )}
+
+            </div>
         </div>
-    </div>
     );
 };
 
