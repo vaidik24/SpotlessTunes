@@ -1,0 +1,17 @@
+/* General Styles */
+body {
+    font-family: 'Circular', sans-serif;
+    background-image: url('../../public/vecteezy_abstract-gradient-pastel-blue-and-purple-background-neon_8617161-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+}
+
+#root {
+    height: 100%;
+}
