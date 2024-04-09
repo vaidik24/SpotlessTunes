@@ -6,6 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
   min-height: 100vh;
   position: relative;
 }
@@ -26,6 +27,7 @@
   max-width: 95%; /* Adjusted to allow for wider content */
   margin: 0 auto;
   padding: 10px;
+  color: aliceblue;
   position: relative; /* Ensure container stays above the background */
   z-index: 1; /* Ensure container stays above the background */
 }
@@ -50,7 +52,7 @@
 }
 
 .centered-content .wider-paragraph {
-  color: black;
+  color: rgb(215, 214, 214);
   line-height: 1.6;
   font-size: 16px;
   width: 100%;
