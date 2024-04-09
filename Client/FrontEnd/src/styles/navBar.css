@@ -1,9 +1,9 @@
 /* navBar.css */
 
 .navbar {
-  background-color: #000; /* Keep the dark background */
-  padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.7); /* Translucent black background */
+  padding: 20px 20px; /* Padding to adjust height */
+  box-shadow: 0 2px 2px rgb(125, 125, 125);
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -30,8 +30,8 @@
 }
 
 .navbar-link:hover {
-  background-color: rgba(30, 215, 96, 0.2); /* Light green background on hover */
-  color: #fff; /* Change text color on hover */
+  background-color: rgb(255, 255, 255); /* Light green background on hover */
+  color: #4500ff; /* Change text color on hover */
 }
 
 .navbar-btn {
