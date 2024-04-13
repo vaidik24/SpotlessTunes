@@ -6,6 +6,18 @@ const spotifyService = (accessToken) => {
     const spotifyApi = new SpotifyWebApi();
     spotifyApi.setAccessToken(accessToken);
 
+    const searchSongs = async (query) => {
+        try{
+            const data = await spotifyApi.searchTracks(`track:${query}`)
+            return data.body.tracks.items.map((item) => ({
+                img: item.album.images[0],
+                artist: item.artists.map((artist) => artist.name),
+                name: item.name
+            }));
+        }catch (err){
+            console.log(err);
+        }
+    }
 
     const getTopArtists = async () => {
         try {
@@ -144,7 +156,8 @@ const spotifyService = (accessToken) => {
         getPlaylistTracksWithDuplicates,
         removeDuplicateTracksFromPlaylist,
         getTopArtists,
-        getTopTracks
+        getTopTracks,
+        searchSongs
         // Add more methods as needed...
     };
 };
