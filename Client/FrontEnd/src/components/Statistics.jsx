@@ -43,9 +43,9 @@ const Statistics = () => {
             </div>
 
             <div className="container">
-                <h1>Your top artists and tracks!</h1>
+                <h1>Your top {statType}!</h1>
                 {statType === "artists" && (
-                    <div>
+                    <div className="list-parent">
                         {dataLoaded && (
                             <ul className="list">
                                 {topArtists.map((artist, index) => (
@@ -65,7 +65,7 @@ const Statistics = () => {
                 )}
 
                 {statType === "tracks" && (
-                    <div>
+                    <div className="list-parent">
                         {dataLoaded && (
                             <ul className="list">
                                 {topTracks.map((track, index) => (
