@@ -1,17 +1,17 @@
 /* General Styles */
-body {
-    font-family: 'Circular', sans-serif;
-    background-image: url('../../public/bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-
+body{
+    font-family: 'Circular', sans-serif !important;
+    background-image: url('HD-wallpaper-dark-light-pink-shades-pink-background-pink-background-thumbnail.jpg')!important;
+    background-size: cover !important; /* Preserve aspect ratio and cover the entire container */
+    background-repeat: no-repeat !important; /* Prevent the background image from repeating */
+    background-position: center !important; ; /* Center the background image */
+    color: #ffffff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
+    min-height: 100vh !important;
 }
 
 #root {
-    height: 100%;
+    height: 100% !important;
 }
