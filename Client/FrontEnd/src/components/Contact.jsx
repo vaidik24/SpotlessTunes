@@ -5,18 +5,18 @@ function Contact() {
     <div className="contact-container">
       <div className="glassy-card">
         <div className="contact-card">
-          <img src="team_member_1.jpg" alt="Team Member 1" />
-          <h2>John Doe</h2>
-          <p>Frontend Developer</p>
-          <p>Email: john@example.com</p>
+          <img src="team_member_1.jpeg" alt="Team Member 1" />
+          <h2>Rahil Ganatra</h2>
+          <p>Backend Developer</p>
+          <p>Email: rahilganatra@gmail.com</p>
           <p>
             GitHub:{" "}
             <a
-              href="https://github.com/johndoe"
+              href="https://github.com/grahil-24"
               target="_blank"
               rel="noopener noreferrer"
             >
-              johndoe
+              Rahil Ganatra
             </a>
           </p>
           <p>
@@ -26,7 +26,7 @@ function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              johndoe
+              Rahil Ganatra
             </a>
           </p>
         </div>
