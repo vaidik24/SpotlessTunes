@@ -105,14 +105,6 @@ const removeDuplicates = async (req, res) => {
   tracks.forEach((track) => {
     trackPos.push(track.pos);
   });
-  // console.log(playlistId);
-  // console.log(tracks);
-
-  // await spotifyApi.removeTracksFromPlaylist(playlistId, trackURIs).then(function(data) {
-  //     console.log('Tracks removed from playlist!');
-  // }, function(err) {
-  //     console.log('Something went wrong!', err);
-  // });
 
   await spotifyApi
     .removeTracksFromPlaylistByPosition(playlistId, trackPos, snapshot)
