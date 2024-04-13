@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import "./styles/App.css";
 import Login from "./components/Login.jsx";
 import RemoveDuplicates from "./components/RemoveDuplicates.jsx";
 import AuthCodeHandler from "./components/AuthCodeHandler.jsx";
