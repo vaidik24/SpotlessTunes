@@ -19,15 +19,14 @@
 }
 
 .playlist-item {
-  background-color: #282828;
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
-    margin-right: 15px;
-    background: linear-gradient(to bottom right, #1c1c1c, #2d2d2d); /* Add gradient background */
-    border-radius: 10px;
-    padding: 20px;
-    transition: transform 0.3s ease-in-out;
+  margin-right: 15px;
+  /* Add gradient background */
+  background-color:  rgba(28, 28, 28, 0.6);
+  /*background: linear-gradient(to bottom right, #1c1c1c, #2d2d2d);*/
+  transition: transform 0.3s ease-in-out;
   
 }
 
@@ -59,17 +58,13 @@
   transition: background-color .4s;
 }
 
-
-
-
-
 .playlist-action-button:hover {
   background-color: #25b858;
 }
 
 /* Styles for duplicate tracks section */
 .duplicate-tracks {
-  background-color: #3a3a3a;
+  background-color: rgba(215, 59, 255, 0.1);
   border-radius: 5px;
   padding: 10px;
   margin-top: 10px;
@@ -92,8 +87,6 @@
   margin-bottom: 3px;
   color: #b4b4b4;
 }
-
-
 
 /* Responsive Styles */
 @media screen and (max-width: 600px) {
