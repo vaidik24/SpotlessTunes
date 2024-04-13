@@ -10,7 +10,7 @@ function Login() {
         <div className="content-wrapper">
           <div className="container">
             <div className="centered-content">
-              <img src="../../public/Spotless%20Tunes-logo.png"></img>
+              <img src="/Spotless%20Tunes-logo.png"></img>
               <p className="wider-paragraph">
                 Introducing our all-in-one Spotify Playlist Manager! Effortlessly
                 declutter your playlists by removing duplicates, while gaining
@@ -19,7 +19,7 @@ function Login() {
                 and enjoyment across platforms.
               </p>
               <Link to={AUTH_URL} className="login-button">
-                <img src="../../public/webstorm.png" alt="Spotify Logo" />
+                <img src="/webstorm.png" alt="Spotify Logo" />
                 Login with Spotify
               </Link>
             </div>
