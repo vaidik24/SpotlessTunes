@@ -1,0 +1,33 @@
+/* SearchBar.css */
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust as needed */
+    transition: all 0.3s ease-in-out; /* Add animation for container */
+    flex-direction: row;
+}
+
+.search-bar-container .btn-search{
+    margin-left: 50px;
+    width: 60px;
+    height: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 30px;
+}
+
+.search-input {
+    width: 200px; /* Adjust width as needed */
+    padding: 10px;
+    border-radius: 20px; /* Adjust border radius as needed */
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust opacity as needed */
+    outline: none;
+    transition: all 0.3s ease-in-out; /* Add animation for input */
+
+}
+
+.search-input:focus {
+    background-color: rgba(255, 255, 255, 0.7); /* Adjust focus opacity as needed */
+    width: 250px; /* Example animation: increase width on focus */
+}

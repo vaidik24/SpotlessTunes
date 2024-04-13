@@ -1,0 +1,52 @@
+.search-results {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-height: 70vh; /* Set the maximum height to 80% of the viewport height */
+   padding-top: 75px;
+    padding-left: 30px;
+    color: #ffffff;
+}
+
+.search-results-list {
+    list-style: none;
+    /*padding-top: 200px;*/
+    width: 100%;
+    overflow-y: auto; /* Add vertical scrolling */
+    max-width: 100%; /* Adjust the max-width as needed */
+    margin-top: 10px; /* Add some margin to separate the list from the search bar */
+}
+
+.search-result-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-result-item span {
+    margin-right: 20px;
+    font-weight: bold;
+    width: 30px;
+}
+
+.search-result-item div {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    overflow: hidden; /* Prevent the text from overflowing the container */
+     /* Show ellipsis for overflowing text */
+    /*white-space: nowrap; !* Keep the text on a single line *!*/
+}
+
+.search-result-item .track-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.search-result-item div p {
+    margin: 0;
+    text-overflow: ellipsis;
+    padding-right: 20px;
+}
