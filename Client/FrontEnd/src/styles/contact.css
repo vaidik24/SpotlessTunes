@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* Ensure container covers the full viewport height */
 }
 
 .glassy-card {
@@ -46,4 +46,22 @@
 
 .contact-card a:hover {
   text-decoration: underline;
+}
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; /* Stack cards vertically for smaller screens */
+    align-items: center; /* Center cards horizontally for smaller screens */
+  }
+
+  .glassy-card {
+    width: 80%; /* Adjust width for smaller screens */
+    max-width: 300px; /* Set maximum width for smaller screens */
+  }
+
+  .glassy-card + .glassy-card {
+    margin-top: 20px; /* Add spacing between stacked cards */
+  }
 }

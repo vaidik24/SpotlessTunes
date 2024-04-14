@@ -5,7 +5,7 @@
   padding: 20px 20px; /* Padding to adjust height */
   box-shadow: 0 2px 2px rgb(125, 125, 125);
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between; /* Distribute items along the main axis */
   align-items: center;
 }
 
@@ -34,17 +34,57 @@
   color: #4500ff; /* Change text color on hover */
 }
 
-.navbar-btn {
-  background-color: #1ed760; /* Green button background */
-  color: #fff; /* White text color */
-  font-size: 16px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+.menu-icon {
+  width: 30px; /* Adjust the width and height as needed */
+  height: 30px;
 }
 
-.navbar-btn:hover {
-  background-color: #1db954; /* Darker green on hover */
+
+/* Media query for mobile menu icon */
+@media screen and (max-width: 768px) {
+  /* Styles for mobile menu dropdown */
+.navbar-list {
+  display: none;
+}
+
+.show-mobile-menu {
+  display: flex;
+  flex-direction: column;
+}
+.navbar-list {
+  display: none;
+}
+
+.show-mobile-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+  .mobile-menu-icon {
+    display: block; /* Show the menu icon on small screens */
+    cursor: pointer;
+  }
+  .image-icon {
+    display: inline-block;
+    width: 24px; /* Adjust width and height as needed */
+    height: 24px;
+    background-image: url('../../public/menu.png');
+    background-size: cover; /* or contain, depending on your preference */
+  }
+
+  /* Hide the navigation links on small screens by default */
+  .navbar-list {
+    display: none;
+  }
+
+  /* Show the navigation links when the mobile menu is active */
+  .show-mobile-menu .navbar-list {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.7); /* Translucent black background */
+    position: absolute;
+    top: 60px; /* Adjust the top position as needed */
+    left: 0;
+    width: 100%;
+  }
 }

@@ -1,95 +1,132 @@
 /* General Styles */
 body {
-    font-family: 'Circular', sans-serif;
-    background-color: #231c1c;
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Container Wrapper Styles */
-  .content-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
-  
-  /* Container Styles */
+  font-family: 'Circular', sans-serif;
+  background-color: #231c1c;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Container Wrapper Styles */
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container Styles */
+.container {
+  max-width: 90%; /* Adjusted to be relative */
+  margin: 0 20px; /* Adjusted to be relative */
+  padding: 10px;
+}
+
+/* Centered Content Styles */
+.centered-content {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.centered-content h1 {
+  color: #1ed760;
+  font-size: 3em; /* Adjusted to be relative */
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.centered-content p {
+  color: #b3b3b3;
+  line-height: 1.6;
+  font-size: 1em; /* Adjusted to be relative */
+}
+
+/* Input Field Styles */
+.input-field {
+  background-color: #282828;
+  padding: 0 3em 1em 3em; /* Adjusted to be relative */
+  width: 70%; /* Adjusted to be relative */
+  max-width: 400px; /* Adjusted to be relative */
+  border-radius: 30px;
+  box-shadow: 0 2px 6px rgba(20, 20, 20, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-field h4 {
+  color: #1ed760;
+  margin-bottom: 1.5em; /* Adjusted to be relative */
+  text-align: center;
+  font-size: 1.5em; /* Adjusted to be relative */
+  font-weight: 700;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 1em; /* Adjusted to be relative */
+  background-color: #333333;
+  border: none;
+  color: #ffffff;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 1em; /* Adjusted to be relative */
+}
+
+.input-field input::placeholder {
+  color: #b3b3b3;
+}
+
+.input-field button {
+  background-color: #1ed760;
+  color: #191414;
+  padding: 15px 3em;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1em; /* Adjusted to be relative */
+  transition: background-color 0.3s;
+}
+
+.input-field button:hover {
+  background-color: #1db954;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
   .container {
-    max-width: 500px;
-    margin: 0 40px;
-    padding: 10px;
+    max-width: 95%; /* Adjusted for smaller screens */
+    margin: 0 10px; /* Adjusted for smaller screens */
   }
-  
-  /* Centered Content Styles */
-  .centered-content {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
+
   .centered-content h1 {
-    color: #1ed760;
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 20px;
+    font-size: 2.5em; /* Adjusted for smaller screens */
   }
-  
+
   .centered-content p {
-    color: #b3b3b3;
-    line-height: 1.6;
-    font-size: 16px;
+    font-size: 0.9em; /* Adjusted for smaller screens */
   }
-  
-  /* Input Field Styles */
+
   .input-field {
-    background-color: #282828;
-    padding: 0 50px 20px 50px ;
-    width: 30%;
-    border-radius: 30px;
-    box-shadow: 0 2px 6px rgba(20, 20, 20, 0.3);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 90%; /* Adjusted for smaller screens */
+    padding: 0 2em 1em 2em; /* Adjusted for smaller screens */
   }
-  
+
   .input-field h4 {
-    color: #1ed760;
-    margin-bottom: 30px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 1.3em; /* Adjusted for smaller screens */
+    margin-bottom: 1em; /* Adjusted for smaller screens */
   }
-  
+
   .input-field input {
-    width: 100%;
-    max-width: 300px;
-    padding: 15px;
-    margin-bottom: 20px;
-    background-color: #333333;
-    border: none;
-    color: #ffffff;
-    border-radius:inherit;
-    text-align: center;
-    font-size: 16px;
+    font-size: 0.9em; /* Adjusted for smaller screens */
+    margin-bottom: 0.5em; /* Adjusted for smaller screens */
   }
-  
-  .input-field input::placeholder {
-    color: #b3b3b3;
-  }
-  
+
   .input-field button {
-    background-color: #1ed760;
-    color: #191414;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 16px;
-    transition: background-color 0.3s;
+    font-size: 0.9em; /* Adjusted for smaller screens */
+    padding: 15px 2em; /* Adjusted for smaller screens */
   }
-  
-  .input-field button:hover {
-    background-color: #1db954;
-  }
+}

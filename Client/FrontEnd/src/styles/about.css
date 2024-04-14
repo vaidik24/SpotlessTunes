@@ -1,16 +1,16 @@
-.center{
-    margin-top: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.center {
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-container {
-  max-width: 50%;
+  max-width: 80%; /* Adjusted for responsiveness */
   padding: 20px;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  min-height: 50%; /* Ensure container covers the full viewport height */
+  min-height: 50vh; /* Ensure container covers at least 50% of viewport height */
   background-color: rgba(33, 33, 33, 0.3); /* Semi-transparent background color */
   backdrop-filter: blur(10px); /* Apply blur effect to the background */
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Glassy shadow effect */
@@ -21,7 +21,7 @@
   font-size: 2rem;
   font-weight: bold;
   color: #1ed760;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .about-container p {
@@ -29,4 +29,28 @@
   line-height: 1.6;
   color: #ffffff;
   margin-bottom: 20px;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1024px) {
+  .about-container {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-container {
+    width: 95%; /* Further adjust width for mobile devices */
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .about-container h1 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+    margin-bottom: 15px; /* Adjust margin for smaller screens */
+  }
+
+  .about-container p {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+    margin-bottom: 15px; /* Adjust margin for smaller screens */
+  }
 }

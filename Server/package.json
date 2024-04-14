@@ -16,6 +16,7 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.1",
     "genius-lyrics-api": "^3.2.1",
+    "mongoose": "^8.3.1",
     "spotify-web-api-node": "^5.0.2"
   },
   "devDependencies": {

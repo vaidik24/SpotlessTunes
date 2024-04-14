@@ -10,7 +10,8 @@ import AboutPage from "./components/AboutPage.jsx";
 import Contact from "./components/Contact.jsx";
 import SearchSongs from "./components/SearchSongs.jsx";
 import SongMeaning from "./components/SongMeaning.jsx";
-import {ChakraProvider} from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
+import Review from "./components/Review.jsx";
 function App() {
   // const code = new URLSearchParams(window.location.search).get("code");
   // const accessToken = useAuth(code);
@@ -22,7 +23,14 @@ function App() {
           <NavBar />
           <Routes>
             <Route path="/" element={<Login />} />
-            <Route path="/home" element={<ChakraProvider><Home /></ChakraProvider>} />
+            <Route
+              path="/home"
+              element={
+                <ChakraProvider>
+                  <Home />
+                </ChakraProvider>
+              }
+            />
             <Route path="/remove-duplicates" element={<RemoveDuplicates />} />
             <Route path="/auth" element={<AuthCodeHandler />} />
             <Route path="/stats" element={<Statistics />} />
@@ -30,6 +38,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/search-songs" element={<SearchSongs />} />
             <Route path="/get-meaning" element={<SongMeaning />} />
+            <Route path="/review" element={<Review />} />
           </Routes>
         </AccessTokenProvider>
       </Router>

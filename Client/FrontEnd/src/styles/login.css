@@ -1,4 +1,12 @@
-
+/* General Styles */
+body {
+  font-family: 'Circular', sans-serif;
+  background-color: #231c1c;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
 /* Container Wrapper Styles */
 .content-wrapper {
@@ -6,7 +14,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
   min-height: 100vh;
   position: relative;
 }
@@ -37,7 +44,7 @@
   text-align: center;
   margin-bottom: 40px;
   width: 95%;
-  max-width: 1200px;
+  max-width: 90%; /* Adjusted for smaller screens */
   margin-left: auto;
   margin-right: auto;
   position: relative; /* Ensure content stays above the background */
@@ -46,7 +53,7 @@
 
 .centered-content h1 {
   color: #1ed760;
-  font-size: 48px;
+  font-size: 3rem; /* Adjusted to be responsive */
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -54,7 +61,7 @@
 .centered-content .wider-paragraph {
   color: rgb(215, 214, 214);
   line-height: 1.6;
-  font-size: 16px;
+  font-size: 1rem; /* Adjusted to be responsive */
   width: 100%;
   text-align: center;
   margin-left: auto;
@@ -67,7 +74,7 @@
   justify-content: center;
   background-color: white;
   color: green;
-  font-size: 16px;
+  font-size: 1rem; /* Adjusted to be responsive */
   font-weight: bold;
   padding: 12px 24px;
   border-radius: 24px;
@@ -78,13 +85,13 @@
 }
 
 .login-button img {
-  width: 40px;
-  height: 40px;
-  margin-left: -10px;
-  margin-right: 8px;
+  width: 2rem; /* Adjusted to be responsive */
+  height: 2rem; /* Adjusted to be responsive */
+  margin-left: -0.625rem; /* Adjusted to be responsive */
+  margin-right: 0.5rem; /* Adjusted to be responsive */
 }
 
 img {
-  width: 300px;
-  height: 170px;
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto; /* Ensure images maintain aspect ratio */
 }

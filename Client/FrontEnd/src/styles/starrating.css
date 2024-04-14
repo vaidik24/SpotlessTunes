@@ -1,0 +1,16 @@
+/* starRating.css */
+.star-rating {
+    display: inline-block;
+  }
+  
+  .star {
+    color: #ccc;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .star-filled {
+    color: #ffc107; /* Yellow color */
+  }
+  

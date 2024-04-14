@@ -1,0 +1,57 @@
+/* review.css */
+
+.review-container {
+    max-width: 50%;
+    margin: 0 auto;
+    margin-top: 2%;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: linear-gradient(to bottom right, #1c1c1c, #2d2d2d);
+    color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  
+  .review-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .review-container p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  .review-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .rating-select,
+  .review-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  .submit-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #1ed760;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #1db954;
+  }
+  
