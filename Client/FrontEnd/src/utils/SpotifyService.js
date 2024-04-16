@@ -6,6 +6,17 @@ const spotifyService = (accessToken) => {
   const spotifyApi = new SpotifyWebApi();
   spotifyApi.setAccessToken(accessToken);
 
+  const getMe = async () => {
+    try{
+      const res = await spotifyApi.getMe();
+      const me = res.body.display_name;
+      return me;
+    }catch(err){
+      console.log(err);
+    }
+
+  }
+
   const searchSongs = async (query) => {
     try {
       const data = await spotifyApi.searchTracks(`track:${query}`);
@@ -174,6 +185,7 @@ const spotifyService = (accessToken) => {
     getTopTracks,
     searchSongs,
     getUsername,
+    getMe
     // Add more methods as needed...
   };
 };

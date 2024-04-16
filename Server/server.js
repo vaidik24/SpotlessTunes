@@ -1,25 +1,10 @@
 const express = require("express");
 const SpotifyWebApi = require("spotify-web-api-node");
 const cors = require("cors");
-const lyricsRoute = require("./routes/lyricsRoute");
+const lyricsRoute = require('./routes/lyricsRoute');
 const dotenv = require("dotenv");
-const mongoose = require("mongoose");
-mongoose
-  .connect("mongodb+srv://vaidik24:Vaidik2405@cluster0.rd6wiou.mongodb.net/")
-  .then(() => {
-    console.log("Connected to MongoDB");
-  });
-
-const reviewSchema = new mongoose.Schema({
-  username: String,
-  rating: Number,
-  review: String,
-  date: { type: Date, default: Date.now },
-});
-
-const Review = mongoose.model("Review", reviewSchema);
-console.log("Review schema created");
-
+const userRouter = require("./routes/userRoute");
+const mongoose = require('mongoose');
 dotenv.config();
 
 const app = express();
@@ -36,36 +21,23 @@ const refreshRoute = require("./routes/refreshRoute")(spotifyWebApi);
 app.use(express.json());
 app.use(cors());
 
+app.use('/user' ,userRouter);
 app.use("/login", loginRoute);
 app.use("/refresh", refreshRoute);
 app.use("/lyrics", lyricsRoute);
 
-app.post("/reviews", async function (req, res) {
-  const { username, rating, review } = req.body;
-
+const connectDB = async () => {
   try {
-    console.log(username, rating, review);
-    // Create a new review document
-    const newReview = new Review({
-      username: username,
-      rating: rating,
-      review: review,
-      date: Date.now(),
+    const conn = await mongoose.connect('mongodb+srv://vaidik24:Vaidik2405@cluster0.rd6wiou.mongodb.net/test', {
+      useNewUrlParser: true,
     });
-
-    // Save the review document to the database
-    await newReview.save();
-
-    console.log("Review saved to database");
-
-    // Send a success response
-    res.sendStatus(200);
+    console.log(`MongoDB Connected: {conn.connection.host}`);
   } catch (error) {
-    // Handle errors
-    console.error("Error saving review:", error);
-    res.status(500).send("Error saving review");
+    console.error(error.message);
+    process.exit(1);
   }
-});
+}
+connectDB();
 
 app.listen(3001, function () {
   console.log("Server running on port 3001");

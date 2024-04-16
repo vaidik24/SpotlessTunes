@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import menuIcon from "../../public/menu.png"; // Import the menu icon image
+import menuIcon from "/menu.png"; // Import the menu icon image
 import "../styles/navBar.css"; // Import CSS file for styling
 
 const NavBar = () => {

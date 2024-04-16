@@ -57,7 +57,6 @@ const SearchBar = ({ onSearch }) => {
               onChange={handleInputChange}
               onKeyPress={handleKeyPress}
               _placeholder={{ color: "gray.400" }}
-              borderRadius={50}
             />
             <Button
               size="md"
