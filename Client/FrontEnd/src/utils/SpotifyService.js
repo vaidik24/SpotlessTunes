@@ -10,6 +10,7 @@ const spotifyService = (accessToken) => {
     try{
       const res = await spotifyApi.getMe();
       const me = res.body.display_name;
+      console.log(me);
       return me;
     }catch(err){
       console.log(err);

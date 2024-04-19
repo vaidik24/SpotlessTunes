@@ -15,20 +15,18 @@ export default function useAuth(code) {
         code,
       })
       .then((res) => {
-        console.log("hello from uceAuth");
         console.log("1. " + res.data.accessToken);
         setAccessToken(res.data.accessToken);
         access_token = res.data.accessToken;
         setRefreshToken(res.data.refreshToken);
         setExpiresIn(res.data.expiresIn);
         // window.history.pushState({}, null, "/");
-        console.log("2. hello from uceAuth");
       })
       .catch(function (err) {
         console.log(err);
         window.location = "/";
       });
-  }, [code]);
+  }, []);
 
   useEffect(() => {
     if (!accessToken) return;
@@ -50,7 +48,7 @@ export default function useAuth(code) {
       setAccessToken(null); // Trigger a re-render with null accessToken
       access_token = ""
     };
-  }, [accessToken, refreshToken, expiresIn]);
+  }, []);
 
   return accessToken;
 }
