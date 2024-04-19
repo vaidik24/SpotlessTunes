@@ -1,5 +1,5 @@
-const {User} = require("../Model/UserModel");
-const {Bug} = require('../Model/BugReportModel');
+const User = require("../Model/UserModel");
+const Bug = require('../Model/BugReportModel');
 const bugReportController = async(req, res) => {
     try{
         const {name, description} = req.body;
