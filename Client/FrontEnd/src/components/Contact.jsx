@@ -33,7 +33,7 @@ function Contact() {
       </div>
       <div className="glassy-card">
         <div className="contact-card">
-          <img src="..\..\public\team_member_2.jpeg" alt="Team Member 2" />
+          <img src="\team_member_2.jpeg" alt="Team Member 2" />
           <h2>Vaidik Pandya</h2>
           <p>Web Developer</p>
           <p>Email: vaidik24pandya@gmail.com</p>

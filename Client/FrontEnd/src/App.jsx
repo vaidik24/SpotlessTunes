@@ -17,32 +17,32 @@ function App() {
   // const accessToken = useAuth(code);
 
   return (
-    <>
-      <Router>
-        <AccessTokenProvider>
-          <NavBar />
-          <Routes>
-            <Route path="/" element={<Login />} />
-            <Route
-              path="/home"
-              element={
-                <ChakraProvider>
-                  <Home />
-                </ChakraProvider>
-              }
-            />
-            <Route path="/remove-duplicates" element={<RemoveDuplicates />} />
-            <Route path="/auth" element={<AuthCodeHandler />} />
-            <Route path="/stats" element={<Statistics />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/search-songs" element={<SearchSongs />} />
-            <Route path="/get-meaning" element={<SongMeaning />} />
-            <Route path="/review" element={<Review />} />
-          </Routes>
-        </AccessTokenProvider>
-      </Router>
-    </>
+      <>
+        <Router>
+          <AccessTokenProvider>
+            <NavBar />
+            <Routes>
+              <Route path="/" element={<Login />} />
+              <Route
+                  path="/home"
+                  element={
+                    <ChakraProvider>
+                      <Home />
+                    </ChakraProvider>
+                  }
+              />
+              <Route path="/remove-duplicates" element={<RemoveDuplicates />} />
+              <Route path="/auth" element={<AuthCodeHandler />} />
+              <Route path="/stats" element={<Statistics />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/search-songs" element={<SearchSongs />} />
+              <Route path="/get-meaning" element={<SongMeaning />} />
+              <Route path="/review" element={<Review />} />
+            </Routes>
+          </AccessTokenProvider>
+        </Router>
+      </>
   );
 }
 

@@ -38,52 +38,50 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <ChakraProvider>
-      <Flex justifyContent="center" alignItems="center" flexDirection="column">
-        <Box marginTop={10}>
-          <InputGroup size="md" boxShadow="md" borderRadius={50}>
-            <InputLeftElement
-              pointerEvents="none"
-              color="gray.300"
-              children={<SearchIcon />}
-              borderRadius={50}
-            />
-            <Input
-              type="text"
-              placeholder="Search..."
-              borderRadius={5}
-              width={300}
-              value={query}
-              onChange={handleInputChange}
-              onKeyPress={handleKeyPress}
-              _placeholder={{ color: "gray.400" }}
-            />
-            <Button
-              size="md"
-              colorScheme="pink"
-              borderRadius={50}
-              onClick={handleSearch}
-              ml={5}
-              _hover={{ bg: "pink.600" }}
-            >
-              <SearchIcon color={"black"} />
-            </Button>
-          </InputGroup>
-        </Box>
-        {invalidQuery && (
-          <Alert
-            status="error"
-            maxW="30%"
-            mt={2}
-            borderRadius={5}
-            boxShadow="md"
-          >
-            <AlertIcon />
-            <AlertDescription>Please enter a valid input</AlertDescription>
-          </Alert>
-        )}
-      </Flex>
-    </ChakraProvider>
+      <ChakraProvider>
+        <Flex justifyContent="center" alignItems="center" flexDirection="column">
+          <Box marginTop={{ base: 20, md: 40 }}>
+            <InputGroup size="md" boxShadow="md" borderRadius={50}>
+              <InputLeftElement
+                  pointerEvents="none"
+                  color="gray.300"
+                  borderRadius={50}
+              />
+              <Input
+                  type="text"
+                  placeholder="Search..."
+                  borderRadius={5}
+                  width={{ base: "80vw", md: 300 }}
+                  value={query}
+                  onChange={handleInputChange}
+                  _placeholder={{ color: "gray.400" }}
+              />
+              <Button
+                  size="md"
+                  colorScheme="pink"
+                  borderRadius={50}
+                  onClick={handleSearch}
+                  ml={{ base: 2, md: 5 }}
+                  _hover={{ bg: "pink.600" }}
+              >
+                <SearchIcon color={"black"} />
+              </Button>
+            </InputGroup>
+          </Box>
+          {invalidQuery && (
+              <Alert
+                  status="error"
+                  maxW="30%"
+                  mt={2}
+                  borderRadius={5}
+                  boxShadow="md"
+              >
+                <AlertIcon />
+                <AlertDescription>Please enter a valid input</AlertDescription>
+              </Alert>
+          )}
+        </Flex>
+      </ChakraProvider>
   );
 };
 

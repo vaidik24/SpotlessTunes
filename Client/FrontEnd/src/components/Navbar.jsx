@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import menuIcon from "/menu.png"; // Import the menu icon image
 import "../styles/navBar.css"; // Import CSS file for styling
 
 const NavBar = () => {
@@ -13,31 +12,31 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="navbar">
-      {/* Render mobile menu icon on mobile devices */}
-      <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
-        <img src={menuIcon} alt="Menu" className="menu-icon" />
-      </div>
-
-      {/* Render navigation links */}
-      <ul className={`navbar-list ${showMobileMenu ? "show-mobile-menu" : ""}`}>
-        <li className="navbar-item">
-          <Link to="/home" className="navbar-link">
-            Home
-          </Link>
-        </li>
-        <li className="navbar-item">
-          <Link to="/about" className="navbar-link">
-            About
-          </Link>
-        </li>
-        <li className="navbar-item">
-          <Link to="/contact" className="navbar-link">
-            Contact
-          </Link>
-        </li>
-      </ul>
-    </nav>
+      <nav className="navbar">
+        {/* Render navigation links */}
+        <ul className={`navbar-list ${showMobileMenu ? "show-mobile-menu" : ""}`}>
+          <li className="navbar-item">
+            <Link to="/home" className="navbar-link">
+              Home
+            </Link>
+          </li>
+          <li className="navbar-item">
+            <Link to="/about" className="navbar-link">
+              About
+            </Link>
+          </li>
+          <li className="navbar-item">
+            <Link to="/contact" className="navbar-link">
+              Contact
+            </Link>
+          </li>
+          <li className="navbar-item">
+            <Link to="/review" className="navbar-link">
+              Review
+            </Link>
+          </li>
+        </ul>
+      </nav>
   );
 };
 
