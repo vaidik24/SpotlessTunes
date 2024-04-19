@@ -41,7 +41,7 @@
 @media screen and (max-width: 768px) {
   .about-container {
     width: 95%; /* Further adjust width for mobile devices */
-    padding: 15px; /* Reduce padding for smaller screens */
+    padding: 50px; /* Reduce padding for smaller screens */
   }
 
   .about-container h1 {

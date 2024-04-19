@@ -2,32 +2,66 @@
 .search-bar-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px; /* Adjust as needed */
-    transition: all 0.3s ease-in-out; /* Add animation for container */
+    align-items: center; /* Center align vertically */
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
     flex-direction: row;
 }
 
-.search-bar-container .btn-search{
-    margin-left: 50px;
-    width: 60px;
-    height: 30px;
-    margin-top: auto;
-    margin-bottom: auto;
-    border-radius: 30px;
+.search-bar-container .btn-search {
+    margin-left: 10px; /* Reduce the margin for better spacing */
+    width: 40px; /* Adjust the width of the search button */
+    height: 40px; /* Adjust the height of the search button */
+    border-radius: 50%; /* Make the search button circular */
+    background-color: #1ed760; /* Set the background color */
+    color: #ffffff; /* Set the text color */
+    border: none;
+    cursor: pointer; /* Add cursor pointer for better UX */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center align the search icon */
+    transition: background-color 0.3s ease-in-out; /* Add transition for hover effect */
+}
+
+.search-bar-container .btn-search:hover {
+    background-color: #1db954; /* Change background color on hover */
 }
 
 .search-input {
-    width: 200px; /* Adjust width as needed */
-    padding: 10px;
-    border-radius: 20px; /* Adjust border radius as needed */
+    width: 300px; /* Increase the initial width */
+    padding: 10px 20px; /* Add horizontal padding */
+    border-radius: 20px;
     border: none;
-    background-color: rgba(255, 255, 255, 0.5); /* Adjust opacity as needed */
+    background-color: rgba(255, 255, 255, 0.7); /* Increase the initial opacity */
     outline: none;
-    transition: all 0.3s ease-in-out; /* Add animation for input */
-
+    transition: all 0.3s ease-in-out;
+    font-size: 16px; /* Adjust the font size */
+    color: #333333; /* Set the text color */
 }
 
 .search-input:focus {
-    background-color: rgba(255, 255, 255, 0.7); /* Adjust focus opacity as needed */
-    width: 250px; /* Example animation: increase width on focus */
+    background-color: rgba(255, 255, 255, 0.9); /* Increase the focus opacity */
+    width: 400px; /* Increase the width on focus */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .search-bar-container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center;
+        margin-top: 10px; /* Adjust the margin-top */
+    }
+
+    .search-bar-container .btn-search {
+        margin-left: 0;
+        margin-top: 10px; /* Add top margin for the search button */
+    }
+
+    .search-input {
+        width: 250px; /* Adjust the initial width on smaller screens */
+    }
+
+    .search-input:focus {
+        width: 300px; /* Adjust the focus width on smaller screens */
+    }
 }

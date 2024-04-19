@@ -1,12 +1,16 @@
 /* navBar.css */
-
 .navbar {
-  background-color: rgba(0, 0, 0, 0.7); /* Translucent black background */
-  padding: 20px 20px; /* Padding to adjust height */
-  box-shadow: 0 2px 2px rgb(125, 125, 125);
+  background-color: rgba(0, 0, 0);
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(125, 125, 125, 0.5);
   display: flex;
-  justify-content: space-between; /* Distribute items along the main axis */
+  justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 
 .navbar-list {
@@ -14,6 +18,7 @@
   margin: 0;
   padding: 0;
   display: flex;
+  align-items: center;
 }
 
 .navbar-item {
@@ -22,7 +27,7 @@
 
 .navbar-link {
   text-decoration: none;
-  color: #1ed760; /* Green color for links */
+  color: #1ed760;
   font-size: 16px;
   padding: 10px 20px;
   border-radius: 30px;
@@ -30,61 +35,23 @@
 }
 
 .navbar-link:hover {
-  background-color: rgb(255, 255, 255); /* Light green background on hover */
-  color: #4500ff; /* Change text color on hover */
+  background-color: #1ed760;
+  color: #ffffff;
 }
 
-.menu-icon {
-  width: 30px; /* Adjust the width and height as needed */
-  height: 30px;
-}
-
-
-/* Media query for mobile menu icon */
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
-  /* Styles for mobile menu dropdown */
-.navbar-list {
-  display: none;
-}
-
-.show-mobile-menu {
-  display: flex;
-  flex-direction: column;
-}
-.navbar-list {
-  display: none;
-}
-
-.show-mobile-menu {
-  display: flex;
-  flex-direction: column;
-}
-
-  .mobile-menu-icon {
-    display: block; /* Show the menu icon on small screens */
-    cursor: pointer;
-  }
-  .image-icon {
-    display: inline-block;
-    width: 24px; /* Adjust width and height as needed */
-    height: 24px;
-    background-image: url('../../public/menu.png');
-    background-size: cover; /* or contain, depending on your preference */
-  }
-
-  /* Hide the navigation links on small screens by default */
   .navbar-list {
-    display: none;
+    display: flex;
+    align-items: center;
   }
 
-  /* Show the navigation links when the mobile menu is active */
-  .show-mobile-menu .navbar-list {
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.7); /* Translucent black background */
-    position: absolute;
-    top: 60px; /* Adjust the top position as needed */
-    left: 0;
-    width: 100%;
+  .navbar-item {
+    margin-left: 10px;
+  }
+
+  .navbar-link {
+    font-size: 14px; /* Reduced font size for mobile screens */
+    padding: 8px 16px; /* Reduced padding for mobile screens */
   }
 }

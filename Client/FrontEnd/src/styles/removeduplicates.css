@@ -24,10 +24,9 @@
   margin-bottom: 20px;
   margin-right: 15px;
   /* Add gradient background */
-  background-color:  rgba(28, 28, 28, 0.6);
+  background-color: rgba(28, 28, 28, 0.6);
   /*background: linear-gradient(to bottom right, #1c1c1c, #2d2d2d);*/
   transition: transform 0.3s ease-in-out;
-  
 }
 
 .playlist-info {
@@ -90,53 +89,16 @@
 
 /* Responsive Styles */
 @media screen and (max-width: 600px) {
-  .dashboard-container {
-    padding: 10px;
-    text-align: center; /* Center content horizontally */
-  }
-
-  .playlist-item {
-    display: inline-block; /* Display playlist items as inline-block */
-    text-align: left; /* Reset text alignment for playlist item content */
-    background-color: #282828;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 0 auto; /* Center playlist items horizontally */
-    margin-bottom: 15px;
-    max-width: 80%; /* Limit maximum width of playlist items */
-  }
-
   .playlist-info {
-    flex-direction: column; /* Change flex direction to column */
-    align-items: flex-start; /* Align items to start of column */
-  }
-
-  .playlist-actions {
-    margin-top: 10px; /* Add some space between playlist name and buttons */
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .playlist-name {
-    font-size: 1rem;
-    margin-bottom: 8px; /* Add some space between playlist name and buttons */
+    margin-bottom: 10px;
   }
 
-  .playlist-action-button {
-    padding: 8px 12px;
-    font-size: 0.9rem;
-  }
-
-  .duplicate-tracks {
-    padding: 8px;
-    margin-top: 8px;
-  }
-
-  .duplicate-tracks h4 {
-    font-size: 0.9rem;
-    margin-bottom: 4px;
-  }
-
-  .duplicate-tracks li {
-    font-size: 0.8rem;
-    margin-bottom: 2px;
+  .playlist-actions {
+    margin-top: 0;
   }
 }

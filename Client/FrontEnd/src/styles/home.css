@@ -1,61 +1,76 @@
-
+/* CSS for Home Page */
 .home-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    
-    overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the start */
+  min-height: 100vh; /* Use min-height instead of height */
+  padding-top: 60px; /* Adjust padding to leave space for navbar */
+}
+
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px; /* Add padding around the grid */
+  text-align: center;
+}
+
+.home-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 0 0 3px #22a550; /* Updated box-shadow */
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.home-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 0 0 5px #00dc4d; /* Updated box-shadow on hover */
+}
+
+.home-card h2 {
+  color: #2bff00;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.home-card p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.home-button {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #1ed760;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.home-button:hover {
+  background-color: #1db954;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .home-container {
+    align-items: center; /* Align items to the center on smaller screens */
   }
-  
+
   .home-cards {
-    display: flex;
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Reduce the minimum card width */
+    padding: 10px; /* Adjust padding for smaller screens */
+    gap: 20px; /* Reduce gap between cards */
   }
-  
-  .home-card {
-    background: linear-gradient(to bottom right, #1c1c1c, #2d2d2d);
-    color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 2px solid transparent;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .home-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-    border: 2px solid #1ed760;
-  }
-  
-  .home-card h3 {
-    color: aliceblue;
-    margin-bottom: 10px;
-    font-size: 1.8rem;
-    text-align: center;
-  }
-  
-  .home-card p {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
-  
-  .home-button {
-    padding: 12px 24px;
-    font-size: 16px;
-    background-color: #1ed760;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .home-button:hover {
-    background-color: #1db954;
-  }
+}

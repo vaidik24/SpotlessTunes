@@ -4,7 +4,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     max-height: 70vh; /* Set the maximum height to 80% of the viewport height */
-   padding-top: 75px;
+    padding-top: 75px;
     padding-left: 30px;
     color: #353535;
 }
@@ -35,7 +35,7 @@
     align-items: center;
     flex-grow: 1;
     overflow: hidden; /* Prevent the text from overflowing the container */
-     /* Show ellipsis for overflowing text */
+    /* Show ellipsis for overflowing text */
     /*white-space: nowrap; !* Keep the text on a single line *!*/
 }
 

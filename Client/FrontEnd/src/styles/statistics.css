@@ -27,13 +27,13 @@
     font-size: 18px;
     font-weight: bold;
     transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 20px rgba(30, 215, 96, 0.5); /* Adding glow effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 20px rgba(30, 215, 96, 0.5);
 }
 
 /* Button hover effect */
 .buttons button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 0 30px rgba(30, 215, 96, 0.7); /* Increasing glow on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 0 30px rgba(30, 215, 96, 0.7);
 }
 
 /* Container styling */
@@ -48,7 +48,7 @@ h1 {
     font-size: 24px;
 }
 
-.list-parent{
+.list-parent {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -60,11 +60,9 @@ h1 {
     list-style: none;
     padding: 0;
     margin-top: 50px;
-    margin-right: -200px;
-    margin-left: -200px;
-    display: flex; /* Make the list items display flex */
-    flex-wrap: wrap; /* Allow wrapping of list items */
-    justify-content: space-around; /* Center the list items horizontally */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     max-width: 70%;
 }
 
@@ -75,14 +73,13 @@ h1 {
     padding: 15px;
     margin-bottom: 15px;
     background-color: rgba(28, 28, 28, 0.4);
-    /*background-image: linear-gradient(to right, #282828, #1a1a1a);*/
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition property */
-    width: calc(45% - 15px); /* Set the width of each list item to 45% with margin */
-    margin-right: 20px; /* Add margin to separate list items */
-    margin-left: 20px; /* Add margin to separate list items */
-    box-sizing: border-box; /* Include padding and border in the width */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: calc(45% - 15px);
+    margin-right: 20px;
+    margin-left: 20px;
+    box-sizing: border-box;
 }
 
 /* List item hover effect */
@@ -112,9 +109,8 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: -17px; /* Reduce the margin-top to decrease the vertical space */
-    margin-bottom: -17px; /* Reduce the margin-top to decrease the vertical space */
-    /*padding-top: 0px;*/
+    margin-top: -17px;
+    margin-bottom: -17px;
 }
 
 /* Track name styling */
@@ -122,7 +118,7 @@ h1 {
     color: #ffffff;
     font-size: 15px;
     font-weight: bold;
-    margin-bottom: 2px; /* Reduce the margin-bottom to decrease the vertical space */
+    margin-bottom: 2px;
 }
 
 /* Artist name styling */
@@ -143,4 +139,66 @@ h1 {
     color: #1ed760;
     font-weight: bold;
     margin-right: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Button styling */
+    .buttons button {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 0 5px;
+    }
+
+    /* List styling */
+    .list {
+        max-width: 90%;
+    }
+
+    /* List item styling */
+    .list-item {
+        width: calc(90% - 15px);
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    /* Image and content wrapper */
+    .list-item-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Image styling */
+    .list-item img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Track and artist name wrapper */
+    .track-artist-names {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Heading styling */
+    h1 {
+        font-size: 20px;
+    }
+
+    /* List item styling */
+    .list-item {
+        padding: 10px;
+    }
+
+    /* Track name styling */
+    .track-name {
+        font-size: 14px;
+    }
+
+    /* Artist name styling */
+    .artist-name {
+        font-size: 14px;
+    }
 }

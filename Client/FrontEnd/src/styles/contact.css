@@ -2,41 +2,42 @@
 
 .contact-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Ensure container covers the full viewport height */
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .glassy-card {
+  width: 300px;
   margin: 20px;
   padding: 20px;
-  background-color: rgba(33, 33, 33, 0.3); /* Semi-transparent background color */
-  backdrop-filter: blur(10px); /* Apply blur effect to the background */
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Glassy shadow effect */
+  background-color: rgba(33, 33, 33, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
   border-radius: 10px;
-}
-
-.contact-card {
   text-align: center;
 }
 
 .contact-card img {
   width: 100px;
   height: 100px;
+  object-fit: cover; /* Ensure images maintain aspect ratio */
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin: 0 auto 10px; /* Center image vertically and add spacing */
 }
 
 .contact-card h2 {
   color: #1ed760;
-  font-size: 22px;
+  font-size: 1.5rem; /* Adjust font size */
   margin-bottom: 10px;
 }
 
 .contact-card p {
   color: #ffffff;
-  font-size: 14px;
-  margin-bottom: 8px;
+  font-size: 1rem; /* Adjust font size */
+  margin-bottom: 10px; /* Increase spacing between paragraphs */
 }
 
 .contact-card a {
@@ -51,17 +52,13 @@
 /* Media queries for responsiveness */
 
 @media screen and (max-width: 768px) {
-  .contact-container {
-    flex-direction: column; /* Stack cards vertically for smaller screens */
-    align-items: center; /* Center cards horizontally for smaller screens */
-  }
-
   .glassy-card {
-    width: 80%; /* Adjust width for smaller screens */
-    max-width: 300px; /* Set maximum width for smaller screens */
+    width: calc(100% - 40px);
+    max-width: none;
   }
 
-  .glassy-card + .glassy-card {
-    margin-top: 20px; /* Add spacing between stacked cards */
+  .contact-card img {
+    width: 80px; /* Reduce image size for smaller screens */
+    height: 80px;
   }
 }
