@@ -1,7 +1,85 @@
 import { Link } from "react-router-dom";
 import "../styles/home.css"; // Import CSS file
-
+import spotifyService from "../utils/SpotifyService.js";
+import {
+  Text, Button,  Modal, ModalOverlay, ModalContent, ModalHeader,
+  ModalCloseButton,
+  ModalBody, Input, ModalFooter, AlertIcon, AlertDescription, Alert
+} from "@chakra-ui/react"
+import {useEffect, useState} from "react";
 const Home = () => {
+
+  const accessToken = localStorage.getItem("accessToken");
+  const [isBugReportOpen, setIsBugReportOpen] = useState(false);
+  const [bugDescription, setBugDescription] = useState("");
+  const [bugDescriptionStatus, setBugDescriptionStatus] = useState("new");
+  const service = spotifyService(accessToken);
+
+  useEffect(() => {
+
+    const fetchUserDetails = async () => {
+      try{
+        const me = await service.getMe();
+        localStorage.setItem("user", me);
+      }catch(err){
+        console.log(err);
+      }
+    }
+
+    fetchUserDetails();
+
+  }, [accessToken]);
+
+  const handleBugSubmit = async () => {
+    const name = localStorage.getItem("user");
+    console.log(name);
+    if(bugDescription === ""){
+      setBugDescriptionStatus("warning");
+    }else{
+      try{
+        const res = await fetch("http://localhost:3001/user/bug-report", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            description: bugDescription,
+            name: name
+          })
+        })
+        if (res.ok) {
+          // If successful, you can handle the response data here
+          await res.json();
+          setBugDescriptionStatus("success");
+        }
+
+      }catch(err){
+        console.log(err);
+      }finally{
+        setBugDescription("");
+      }
+    }
+  }
+
+  const bugWarningComponent = () => {
+    return (
+        <Alert status='warning' maxW={"80%"} maxH={"15"} marginBottom={3} borderRadius={2}>
+          <AlertIcon />
+          <AlertDescription>Please enter a valid description</AlertDescription>
+        </Alert>
+    )
+  }
+
+  const bugSuccessComponent = () => {
+    return (
+        <Alert status='success' maxW={"80%"} maxH={"15"} marginBottom={3} borderRadius={2}>
+          <AlertIcon />
+          <AlertDescription>Bug reported successfully!</AlertDescription>
+        </Alert>
+    )
+  }
+
+
   return (
       <div className="home-container">
         <div className="home-cards">
@@ -59,6 +137,41 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <Modal isOpen={isBugReportOpen} onClose={() => setIsBugReportOpen(false)}>
+          <ModalOverlay/>
+          <ModalContent>
+            <ModalHeader>Report a Bug</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+              <Text mb={2}>Describe the bug you encountered:</Text>
+              {bugDescriptionStatus === "warning" && bugWarningComponent()}
+              {bugDescriptionStatus === "success" && bugSuccessComponent()}
+              <Input
+                  placeholder="Enter bug description"
+                  value={bugDescription}
+                  onChange={(e) => setBugDescription(e.target.value)}
+              />
+            </ModalBody>
+
+            <ModalFooter>
+              <Button colorScheme="green" mr={3} onClick={handleBugSubmit}>
+                Submit
+              </Button>
+              <Button onClick={() => {setIsBugReportOpen(false);setBugDescription(""); setBugDescriptionStatus("new")}}>Close</Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+
+        {/* Bug Report Button */}
+        <Button
+            position="fixed"
+            bottom={4}
+            right={4}
+            colorScheme="red"
+            onClick={() => setIsBugReportOpen(true)}
+        >
+          Report Bug
+        </Button>
       </div>
   );
 };
