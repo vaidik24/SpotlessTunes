@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  frontend:
+    image: rahilg24/21bcp239-frontend
+    ports:
+      - "3000:3000"
+
+  backend:
+    image: rahilg24/21bcp239-backend
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=test
+      - MONGO_INITDB_ROOT_USERNAME=vaidik24
+      - MONGO_INITDB_ROOT_PASSWORD=Vaidik2405
