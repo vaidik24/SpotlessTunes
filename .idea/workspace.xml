@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="41735616-8604-4b11-b0cc-c850a25d75be" name="Changes" comment="bug report">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/updated_background_image.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/updated_background_image/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/FrontEnd/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/FrontEnd/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/FrontEnd/vite.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JSX File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;grahil-24&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="f7f2d98d-cc50-4089-9121-c82bc048abb9" />
+        <option name="url" value="https://github.com/vaidik24/Dup-remover.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2ePC9hZoYK9HHkrtrVBNJ68sp0S" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.SpotifyService.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/rahil/WebstormProjects/Dup-remover/Server&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.app.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.devStart.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/rahil/.local/share/JetBrains/Toolbox/apps/webstorm/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Server" />
+      <recent name="$PROJECT_DIR$/Client/FrontEnd/public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Client/FrontEnd/src/components" />
+      <recent name="$PROJECT_DIR$/Server" />
+      <recent name="$PROJECT_DIR$/Client/FrontEnd/src" />
+      <recent name="$PROJECT_DIR$/Client/FrontEnd/src/utils" />
+      <recent name="$PROJECT_DIR$/Client/FrontEnd/src/styles" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.devStart">
+    <configuration name="SpotifyService.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Client/FrontEnd/src/utils/SpotifyService.js" working-dir="$PROJECT_DIR$/Client/FrontEnd/src/utils">
+      <method v="2" />
+    </configuration>
+    <configuration name="app" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/Server/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="app" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/Client/FrontEnd/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="devStart" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/Server/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="devStart" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Node.js.SpotifyService.js" />
+      <item itemvalue="npm.devStart" />
+      <item itemvalue="npm.dev" />
+      <item itemvalue="npm.app" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.app" />
+        <item itemvalue="Node.js.SpotifyService.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="41735616-8604-4b11-b0cc-c850a25d75be" name="Changes" comment="" />
+      <created>1711796676872</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711796676872</updated>
+      <workItem from="1711796678029" duration="6689000" />
+      <workItem from="1711883865598" duration="2074000" />
+      <workItem from="1711962443258" duration="603000" />
+      <workItem from="1711975849550" duration="3783000" />
+      <workItem from="1711979731728" duration="850000" />
+      <workItem from="1712046857053" duration="33000" />
+      <workItem from="1712057228869" duration="3444000" />
+      <workItem from="1712133148199" duration="171000" />
+      <workItem from="1712137281759" duration="7000000" />
+      <workItem from="1712217876190" duration="1173000" />
+      <workItem from="1712235589203" duration="6000" />
+      <workItem from="1712313459398" duration="5081000" />
+      <workItem from="1712388194276" duration="11960000" />
+      <workItem from="1712403632443" duration="136000" />
+      <workItem from="1712464089198" duration="1560000" />
+      <workItem from="1712483954736" duration="6554000" />
+      <workItem from="1712505497203" duration="1445000" />
+      <workItem from="1712668052023" duration="11721000" />
+      <workItem from="1712719519012" duration="4954000" />
+      <workItem from="1712734832758" duration="2637000" />
+      <workItem from="1712740990609" duration="119000" />
+      <workItem from="1712759761024" duration="3291000" />
+      <workItem from="1712763067389" duration="309000" />
+      <workItem from="1712763580496" duration="2194000" />
+      <workItem from="1712804498385" duration="5674000" />
+      <workItem from="1712825508082" duration="1821000" />
+      <workItem from="1712843491789" duration="2486000" />
+      <workItem from="1712891984760" duration="4479000" />
+      <workItem from="1712896688541" duration="38000" />
+      <workItem from="1712904438662" duration="7650000" />
+      <workItem from="1712917886318" duration="2077000" />
+      <workItem from="1712927012659" duration="5490000" />
+      <workItem from="1712933877563" duration="4708000" />
+      <workItem from="1712941563966" duration="1188000" />
+      <workItem from="1712982265385" duration="6077000" />
+      <workItem from="1712994344528" duration="805000" />
+      <workItem from="1713001562910" duration="825000" />
+      <workItem from="1713011959589" duration="1054000" />
+      <workItem from="1713020334624" duration="53000" />
+      <workItem from="1713020951977" duration="385000" />
+      <workItem from="1713064035152" duration="6678000" />
+      <workItem from="1713080261749" duration="3696000" />
+      <workItem from="1713186159513" duration="105000" />
+      <workItem from="1713240543052" duration="4050000" />
+      <workItem from="1713244604268" duration="1538000" />
+      <workItem from="1713250810996" duration="1414000" />
+      <workItem from="1713257160814" duration="88000" />
+      <workItem from="1713257378900" duration="33000" />
+      <workItem from="1713266393325" duration="4776000" />
+      <workItem from="1713341347351" duration="4646000" />
+      <workItem from="1713347123108" duration="3346000" />
+      <workItem from="1713418106274" duration="760000" />
+      <workItem from="1713419157321" duration="17000" />
+      <workItem from="1713419183278" duration="559000" />
+      <workItem from="1713429628391" duration="5080000" />
+      <workItem from="1713450233769" duration="1387000" />
+      <workItem from="1713517774291" duration="1995000" />
+      <workItem from="1713533852619" duration="8331000" />
+      <workItem from="1713545790554" duration="9000" />
+      <workItem from="1713580802830" duration="623000" />
+      <workItem from="1713682210759" duration="451000" />
+      <workItem from="1713682684841" duration="2000" />
+      <workItem from="1713689656192" duration="101000" />
+      <workItem from="1713702289341" duration="1297000" />
+      <workItem from="1713776468910" duration="29000" />
+      <workItem from="1713776507288" duration="1766000" />
+      <workItem from="1713778784712" duration="4482000" />
+      <workItem from="1713783763862" duration="74000" />
+    </task>
+    <task id="LOCAL-00011" summary="no change">
+      <option name="closed" value="true" />
+      <created>1712218925296</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1712218925296</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added home page before the dashboard from previous version">
+      <option name="closed" value="true" />
+      <created>1712401940175</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1712401940175</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added accesstoken to context">
+      <option name="closed" value="true" />
+      <created>1712401968044</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1712401968044</updated>
+    </task>
+    <task id="LOCAL-00014" summary="statistics for top artists and tracks">
+      <option name="closed" value="true" />
+      <created>1712401987352</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1712401987352</updated>
+    </task>
+    <task id="LOCAL-00015" summary="setting context of access_token to its children component">
+      <option name="closed" value="true" />
+      <created>1712402057579</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1712402057579</updated>
+    </task>
+    <task id="LOCAL-00016" summary="local storage of access_token to solve refresh problem">
+      <option name="closed" value="true" />
+      <created>1712402088252</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1712402088252</updated>
+    </task>
+    <task id="LOCAL-00017" summary="background color changed to white">
+      <option name="closed" value="true" />
+      <created>1712402126620</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1712402126620</updated>
+    </task>
+    <task id="LOCAL-00018" summary="added user-top-read scope for getting user stats">
+      <option name="closed" value="true" />
+      <created>1712402150643</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1712402150643</updated>
+    </task>
+    <task id="LOCAL-00019" summary="renamed components and style name to RemoveDuplicates">
+      <option name="closed" value="true" />
+      <created>1712402198175</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1712402198175</updated>
+    </task>
+    <task id="LOCAL-00020" summary="adding functionality for getting stats from spotify api">
+      <option name="closed" value="true" />
+      <created>1712402219668</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1712402219668</updated>
+    </task>
+    <task id="LOCAL-00021" summary="fixed infinite loop problem which led to rate limit issue">
+      <option name="closed" value="true" />
+      <created>1712491202873</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1712491202873</updated>
+    </task>
+    <task id="LOCAL-00022" summary="made list side by side, some font color changes and added hover animation to list item">
+      <option name="closed" value="true" />
+      <created>1712491250280</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1712491250280</updated>
+    </task>
+    <task id="LOCAL-00023" summary="updated window icon">
+      <option name="closed" value="true" />
+      <created>1712679102316</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1712679102316</updated>
+    </task>
+    <task id="LOCAL-00024" summary="description, edited the login button, added logo">
+      <option name="closed" value="true" />
+      <created>1712679136494</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1712679136494</updated>
+    </task>
+    <task id="LOCAL-00025" summary="added description and website name, logo">
+      <option name="closed" value="true" />
+      <created>1712679180539</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1712679180539</updated>
+    </task>
+    <task id="LOCAL-00026" summary="added main.css">
+      <option name="closed" value="true" />
+      <created>1712679208070</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1712679208070</updated>
+    </task>
+    <task id="LOCAL-00027" summary="reduced transparency and changed hover color">
+      <option name="closed" value="true" />
+      <created>1712679238069</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1712679238069</updated>
+    </task>
+    <task id="LOCAL-00028" summary="changed home button route to /home instead of /">
+      <option name="closed" value="true" />
+      <created>1712679269458</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1712679269458</updated>
+    </task>
+    <task id="LOCAL-00029" summary="logos, backgrounds">
+      <option name="closed" value="true" />
+      <created>1712679317954</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1712679317955</updated>
+    </task>
+    <task id="LOCAL-00030" summary="added main.css">
+      <option name="closed" value="true" />
+      <created>1712679345950</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1712679345950</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Integrated ChakraUI">
+      <option name="closed" value="true" />
+      <created>1712987070890</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1712987070890</updated>
+    </task>
+    <task id="LOCAL-00032" summary="updated contact page">
+      <option name="closed" value="true" />
+      <created>1712987107065</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1712987107065</updated>
+    </task>
+    <task id="LOCAL-00033" summary="nothing imp! removed commented code">
+      <option name="closed" value="true" />
+      <created>1712987151685</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1712987151685</updated>
+    </task>
+    <task id="LOCAL-00034" summary="integrated chakraui">
+      <option name="closed" value="true" />
+      <created>1712987192369</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1712987192369</updated>
+    </task>
+    <task id="LOCAL-00035" summary="google fonts for song lyrics and meaning headers">
+      <option name="closed" value="true" />
+      <created>1712987221224</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1712987221224</updated>
+    </task>
+    <task id="LOCAL-00036" summary="updated paths for images">
+      <option name="closed" value="true" />
+      <created>1712987243282</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1712987243282</updated>
+    </task>
+    <task id="LOCAL-00037" summary="updated background image and overrode chakra ui css. VERY IMPORTANT!">
+      <option name="closed" value="true" />
+      <created>1712987286911</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1712987286911</updated>
+    </task>
+    <task id="LOCAL-00038" summary="nothing imp! code cleanup">
+      <option name="closed" value="true" />
+      <created>1712987354015</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1712987354015</updated>
+    </task>
+    <task id="LOCAL-00039" summary="installed genai, genius api, chakraui and other packages in both front and backend">
+      <option name="closed" value="true" />
+      <created>1712987552732</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1712987552732</updated>
+    </task>
+    <task id="LOCAL-00040" summary="slight updates to list items">
+      <option name="closed" value="true" />
+      <created>1712987626794</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1712987626794</updated>
+    </task>
+    <task id="LOCAL-00041" summary="dynamic header using state">
+      <option name="closed" value="true" />
+      <created>1712987679485</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1712987679485</updated>
+    </task>
+    <task id="LOCAL-00042" summary="added song search functionality">
+      <option name="closed" value="true" />
+      <created>1712987714142</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1712987714142</updated>
+    </task>
+    <task id="LOCAL-00043" summary="refactored routes and added routes to fetch lyrics and meaning. Also integrated dotenv">
+      <option name="closed" value="true" />
+      <created>1712987774400</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1712987774400</updated>
+    </task>
+    <task id="LOCAL-00044" summary="nothing imp. code cleanup">
+      <option name="closed" value="true" />
+      <created>1712987861757</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1712987861757</updated>
+    </task>
+    <task id="LOCAL-00045" summary="slight update to css">
+      <option name="closed" value="true" />
+      <created>1712987947465</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1712987947465</updated>
+    </task>
+    <task id="LOCAL-00046" summary="refactored login and refresh call handler">
+      <option name="closed" value="true" />
+      <created>1712988035591</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1712988035591</updated>
+    </task>
+    <task id="LOCAL-00047" summary="meaning and lyrics controller">
+      <option name="closed" value="true" />
+      <created>1712988069390</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1712988069390</updated>
+    </task>
+    <task id="LOCAL-00048" summary="updated background image">
+      <option name="closed" value="true" />
+      <created>1712994438860</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1712994438860</updated>
+    </task>
+    <task id="LOCAL-00049" summary="updated background image">
+      <option name="closed" value="true" />
+      <created>1712994463795</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1712994463795</updated>
+    </task>
+    <task id="LOCAL-00050" summary="added bug report">
+      <option name="closed" value="true" />
+      <created>1713250906886</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1713250906887</updated>
+    </task>
+    <task id="LOCAL-00051" summary="added bug report">
+      <option name="closed" value="true" />
+      <created>1713250962057</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1713250962057</updated>
+    </task>
+    <task id="LOCAL-00052" summary="css updates">
+      <option name="closed" value="true" />
+      <created>1713542693294</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1713542693295</updated>
+    </task>
+    <task id="LOCAL-00053" summary="updated components">
+      <option name="closed" value="true" />
+      <created>1713542760902</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1713542760902</updated>
+    </task>
+    <task id="LOCAL-00054" summary="installed react star rating">
+      <option name="closed" value="true" />
+      <created>1713542812514</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1713542812514</updated>
+    </task>
+    <task id="LOCAL-00055" summary="updated backend and added user, bugs and reviews, models and controllers">
+      <option name="closed" value="true" />
+      <created>1713542872394</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1713542872394</updated>
+    </task>
+    <task id="LOCAL-00056" summary="code cleanup">
+      <option name="closed" value="true" />
+      <created>1713542902069</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1713542902069</updated>
+    </task>
+    <task id="LOCAL-00057" summary="some backgrounds i liked">
+      <option name="closed" value="true" />
+      <created>1713542914556</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1713542914556</updated>
+    </task>
+    <task id="LOCAL-00058" summary="removed star rating, as react-rating module used">
+      <option name="closed" value="true" />
+      <created>1713542936678</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1713542936678</updated>
+    </task>
+    <task id="LOCAL-00059" summary="bug report">
+      <option name="closed" value="true" />
+      <created>1713581091507</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1713581091508</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="nothing imp! removed commented code" />
+    <MESSAGE value="integrated chakraui" />
+    <MESSAGE value="google fonts for song lyrics and meaning headers" />
+    <MESSAGE value="updated paths for images" />
+    <MESSAGE value="updated background image and overrode chakra ui css. VERY IMPORTANT!" />
+    <MESSAGE value="nothing imp! code cleanup" />
+    <MESSAGE value="installed genai, genius api, chakraui and other packages in both front and backend" />
+    <MESSAGE value="slight updates to list items" />
+    <MESSAGE value="dynamic header using state" />
+    <MESSAGE value="added song search functionality" />
+    <MESSAGE value="refactored routes and added routes to fetch lyrics and meaning. Also integrated dotenv" />
+    <MESSAGE value="nothing imp. code cleanup" />
+    <MESSAGE value="slight update to css" />
+    <MESSAGE value="refactored login and refresh call handler" />
+    <MESSAGE value="meaning and lyrics controller" />
+    <MESSAGE value="updated background image" />
+    <MESSAGE value="added bug report" />
+    <MESSAGE value="css updates" />
+    <MESSAGE value="updated components" />
+    <MESSAGE value="installed react star rating" />
+    <MESSAGE value="updated backend and added user, bugs and reviews, models and controllers" />
+    <MESSAGE value="code cleanup" />
+    <MESSAGE value="some backgrounds i liked" />
+    <MESSAGE value="removed star rating, as react-rating module used" />
+    <MESSAGE value="bug report" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug report" />
+  </component>
+</project>

@@ -1,0 +1,152 @@
+Index: Client/FrontEnd/src/components/Home.jsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { Link } from \"react-router-dom\";\nimport \"../styles/home.css\"; // Import CSS file\nimport { Box, Heading, Text, Button, Card, CardBody, Flex } from \"@chakra-ui/react\"\nconst Home = () => {\n  const accessToken = localStorage.getItem(\"accessToken\");\n\n  if (!accessToken) {\n    return null; // or handle unauthorized access\n  }\n\n  return (\n      <Box py={100}>\n        <Flex justify=\"center\" align=\"center\" gap={100} flexWrap=\"wrap\">\n          <Card maxW=\"md\" w=\"30%\" backgroundColor=\"rgba(45, 55, 72, 0.6)\">\n            <CardBody>\n              <Box>\n                <Heading size=\"md\" mb={2}>Remove Duplicates</Heading>\n                <Text mb={4}>\n                  Click here to remove duplicate tracks from your Spotify playlist.\n                </Text>\n              </Box>\n              <Flex justify=\"flex-end\" mt={4}>\n                <Link to=\"/remove-duplicates\">\n                  <Button colorScheme=\"green\" variant='solid'>Remove duplicates</Button>\n                </Link>\n              </Flex>\n            </CardBody>\n          </Card>\n          <Card maxW=\"md\" w=\"30%\" backgroundColor=\"rgba(45, 55, 72, 0.6)\">\n            <CardBody>\n              <Box>\n                <Heading size=\"md\" mb={2}>View Statistics</Heading>\n                <Text mb={4}>Click here to view statistics about your Spotify playlist.</Text>\n              </Box>\n              <Flex justify=\"flex-end\" mt={4}>\n                <Link to=\"/stats\">\n                  <Button colorScheme=\"green\">View Statistics</Button>\n                </Link>\n              </Flex>\n            </CardBody>\n          </Card>\n          <Card maxW=\"md\" w=\"30%\" backgroundColor=\"rgba(45, 55, 72, 0.6)\">\n            <CardBody>\n              <Box>\n                <Heading size=\"md\" mb={2}>Lyrics Meaning</Heading>\n                <Text mb={4}>Explore song lyrics and their meanings effortlessly.</Text>\n              </Box>\n              <Flex justify=\"flex-end\" mt={4}>\n                <Link to=\"/search-songs\">\n                  <Button colorScheme=\"green\">Discover</Button>\n                </Link>\n              </Flex>\n            </CardBody>\n          </Card>\n          <Card maxW=\"md\" w=\"30%\" backgroundColor=\"rgba(45, 55, 72, 0.6)\">\n            <CardBody>\n              <Box>\n                <Heading size=\"md\" mb={2}>Export Playlists</Heading>\n                <Text mb={4}>Export your spotify playlists to json or csv format and import them to create a playlist anytime!</Text>\n              </Box>\n              <Flex justify=\"flex-end\" mt={4}>\n                <Link to=\"/search-songs\">\n                  <Button colorScheme=\"green\">Discover</Button>\n                </Link>\n              </Flex>\n            </CardBody>\n          </Card>\n        </Flex>\n      </Box>\n  );\n};\n\n\nexport default Home;\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Client/FrontEnd/src/components/Home.jsx b/Client/FrontEnd/src/components/Home.jsx
+--- a/Client/FrontEnd/src/components/Home.jsx	(revision 4b80713a11f7724993f253804869f79ebb789480)
++++ b/Client/FrontEnd/src/components/Home.jsx	(date 1713240959354)
+@@ -1,8 +1,85 @@
+ import { Link } from "react-router-dom";
+ import "../styles/home.css"; // Import CSS file
+-import { Box, Heading, Text, Button, Card, CardBody, Flex } from "@chakra-ui/react"
++import {
++  Box, Heading, Text, Button, Card, CardBody, Flex, Modal, ModalOverlay, ModalContent, ModalHeader,
++  ModalCloseButton,
++  ModalBody, Input, ModalFooter, AlertIcon, AlertDescription, Alert
++} from "@chakra-ui/react"
++import {
++
++} from '@chakra-ui/react'
++import {useEffect, useState} from "react";
++import spotifyService from "../utils/SpotifyService.js";
+ const Home = () => {
+   const accessToken = localStorage.getItem("accessToken");
++  const [isBugReportOpen, setIsBugReportOpen] = useState(false);
++  const [bugDescription, setBugDescription] = useState("");
++  const [bugDescriptionStatus, setBugDescriptionStatus] = useState("new");
++  const service = spotifyService(accessToken);
++
++  useEffect(() => {
++
++    const fetchUserDetails = async () => {
++      try{
++        const me = await service.getMe();
++        localStorage.setItem("user", me);
++      }catch(err){
++        console.log(err);
++      }
++    }
++
++    fetchUserDetails();
++
++  }, [accessToken]);
++
++  const handleBugSubmit = async () => {
++    const name = localStorage.getItem("user");
++    console.log(name);
++    if(bugDescription === ""){
++      setBugDescriptionStatus("warning");
++    }else{
++      try{
++        const res = await fetch("http://localhost:3001/user/bug-report", {
++          method: "POST",
++          headers: {
++            "Content-Type": "application/json"
++          },
++          body: JSON.stringify({
++            description: bugDescription,
++            name: name
++          })
++        })
++        if (res.ok) {
++          // If successful, you can handle the response data here
++          await res.json();
++          setBugDescriptionStatus("success");
++        }
++
++      }catch(err){
++        console.log(err);
++      }finally{
++        setBugDescription("");
++      }
++    }
++  }
++
++  const bugWarningComponent = () => {
++    return (
++        <Alert status='warning' maxW={"80%"} maxH={"15"} marginBottom={3} borderRadius={2}>
++          <AlertIcon />
++          <AlertDescription>Please enter a valid description</AlertDescription>
++        </Alert>
++    )
++  }
++
++  const bugSuccessComponent = () => {
++    return (
++        <Alert status='success' maxW={"80%"} maxH={"15"} marginBottom={3} borderRadius={2}>
++          <AlertIcon />
++          <AlertDescription>Bug reported successfully!</AlertDescription>
++        </Alert>
++    )
++  }
+ 
+   if (!accessToken) {
+     return null; // or handle unauthorized access
+@@ -10,7 +87,7 @@
+ 
+   return (
+       <Box py={100}>
+-        <Flex justify="center" align="center" gap={100} flexWrap="wrap">
++        <Flex justify="center" align="center" gap={100} flexWrap="wrap" >
+           <Card maxW="md" w="30%" backgroundColor="rgba(45, 55, 72, 0.6)">
+             <CardBody>
+               <Box>
+@@ -66,9 +143,44 @@
+             </CardBody>
+           </Card>
+         </Flex>
++        <Modal isOpen={isBugReportOpen} onClose={() => setIsBugReportOpen(false)}>
++          <ModalOverlay/>
++          <ModalContent>
++            <ModalHeader>Report a Bug</ModalHeader>
++            <ModalCloseButton />
++            <ModalBody>
++              <Text mb={2}>Describe the bug you encountered:</Text>
++              {bugDescriptionStatus === "warning" && bugWarningComponent()}
++              {bugDescriptionStatus === "success" && bugSuccessComponent()}
++              <Input
++                  placeholder="Enter bug description"
++                  value={bugDescription}
++                  onChange={(e) => setBugDescription(e.target.value)}
++              />
++            </ModalBody>
++
++            <ModalFooter>
++              <Button colorScheme="green" mr={3} onClick={handleBugSubmit}>
++                Submit
++              </Button>
++              <Button onClick={() => {setIsBugReportOpen(false);setBugDescription(""); setBugDescriptionStatus("new")}}>Close</Button>
++            </ModalFooter>
++          </ModalContent>
++        </Modal>
++
++        {/* Bug Report Button */}
++        <Button
++            position="fixed"
++            bottom={4}
++            right={4}
++            colorScheme="red"
++            onClick={() => setIsBugReportOpen(true)}
++        >
++          Report Bug
++        </Button>
+       </Box>
++
+   );
+ };
+-
+ 
+ export default Home;
