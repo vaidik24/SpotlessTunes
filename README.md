@@ -1,5 +1,7 @@
 # Spotless Tunes
 
+![alt text](images/image.png)
+
 ## Overview
 
 This project is an innovative music management platform that combines React, Node.js, Express.js, and MongoDB. The platform integrates the Spotify API to provide seamless playlist management and lyric retrieval, significantly enhancing user experience and engagement.
@@ -10,6 +12,9 @@ This project is an innovative music management platform that combines React, Nod
 - **Advanced Music Analysis:** Analyze your music library for insights.
 - **Duplicate Removal:** Easily find and remove duplicate tracks from your playlists.
 - **User-Friendly Interface:** Intuitive design that reduces user effort by 30%.
+  ![alt text](images/image2.png)
+  ***
+  ![alt text](images/image1.png)
 
 ## Tech Stack
 
